@@ -3,67 +3,67 @@ import fontFamily from './fontFamily';
 import fontSize from './fontSize';
 
 export default StyleSheet.create({
-  'largeTitle-Bold': {
+  largeTitleBold: {
     fontFamily: fontFamily.bold,
     fontSize: fontSize.fs36,
   },
 
-  'largeTitle-Regular': {
+  largeTitleRegular: {
     fontFamily: fontFamily.regular,
     fontSize: fontSize.fs36,
   },
 
-  'title-ExtraBold': {
+  titleExtraBold: {
     fontFamily: fontFamily.extraBold,
     fontSize: fontSize.fs24,
   },
 
-  'title-Regular': {
+  titleRegular: {
     fontFamily: fontFamily.regular,
     fontSize: fontSize.fs24,
   },
 
-  'medium-Bold': {
+  mediumBold: {
     fontFamily: fontFamily.extraBold,
     fontSize: fontSize.fs14,
   },
 
-  'medium-SemiBold': {
+  mediumSemiBold: {
     fontFamily: fontFamily.semiBold,
     fontSize: fontSize.fs14,
   },
 
-  'medium-Regular': {
+  mediumRegular: {
     fontFamily: fontFamily.regular,
     fontSize: fontSize.fs14,
   },
 
-  'small-Bold': {
+  smallBold: {
     fontFamily: fontFamily.extraBold,
     fontSize: fontSize.fs12,
   },
 
-  'small-SemiBold': {
+  smallSemiBold: {
     fontFamily: fontFamily.semiBold,
     fontSize: fontSize.fs12,
   },
 
-  'small-Regular': {
+  smallRegular: {
     fontFamily: fontFamily.regular,
     fontSize: fontSize.fs12,
   },
 
-  'tiny-Bold': {
+  tinyBold: {
     fontFamily: fontFamily.extraBold,
     fontSize: fontSize.fs10,
   },
 
-  'tiny-SemiBold': {
+  tinySemiBold: {
     fontFamily: fontFamily.semiBold,
     fontSize: fontSize.fs10,
   },
 
-  'tiny-Regular': {
+  tinyRegular: {
     fontFamily: fontFamily.regular,
     fontSize: fontSize.fs10,
   },

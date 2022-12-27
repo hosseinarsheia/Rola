@@ -1,6 +1,6 @@
 export default {
   regular: 'Poppins-Regular',
-  bold: 'Poppins-Bolds',
+  bold: 'Poppins-Bold',
   semiBold: 'Poppins-SemiBold',
   extraBold: 'Poppins-ExtraBold',
 };

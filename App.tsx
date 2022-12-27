@@ -19,8 +19,7 @@ const Screen = () => {
         <Text
           style={{
             color: colors.black.S100,
-            fontSize: 100,
-            fontFamily: R.fonts.extraBold,
+            ...R.style.largeTitleBold,
           }}>
           hello
         </Text>
