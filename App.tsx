@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {SafeAreaProvider} from 'react-native-safe-area-context';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import {ThemeProvider} from './src/theme/ThemeProvider';
+import { ThemeProvider } from './src/theme/ThemeProvider';
 import RolaNavigation from './src/navigation';
 
 const App = () => {

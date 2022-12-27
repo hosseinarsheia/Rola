@@ -1,12 +1,13 @@
 import React from 'react';
-import {useColorScheme} from 'react-native';
-import {lightColors, darkColors} from './colors';
+import { useColorScheme } from 'react-native';
+import { lightColors, darkColors } from './colors';
 
 type ThemeScheme = 'light' | 'dark';
+export type ThemeColorType = typeof lightColors | typeof darkColors;
 
 interface ThemeContextInterface {
   isDark: boolean;
-  colors: typeof lightColors | typeof darkColors;
+  colors: ThemeColorType;
   setScheme: (value: ThemeScheme) => void;
 }
 
@@ -20,7 +21,7 @@ export const ThemeContext = React.createContext<ThemeContextInterface>({
   setScheme: () => {},
 });
 
-export const ThemeProvider = ({children}: ThemeProviderProps) => {
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const colorScheme = useColorScheme();
 
   const [isDark, setIsDark] = React.useState(colorScheme === 'dark');
@@ -36,11 +37,7 @@ export const ThemeProvider = ({children}: ThemeProviderProps) => {
     setScheme: (scheme: ThemeScheme) => setIsDark(scheme === 'dark'),
   };
 
-  return (
-    <ThemeContext.Provider value={defaultTheme}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={defaultTheme}>{children}</ThemeContext.Provider>;
 };
 
 // Custom hook to get the theme object returns {isDark, colors, setScheme}

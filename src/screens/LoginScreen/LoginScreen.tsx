@@ -1,17 +1,22 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import { Text, StyleSheet } from 'react-native';
+
+import { MyScreenContainer } from '../../components';
 
 const LoginScreen = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
+    <MyScreenContainer style={styles.container}>
       <Text> LoginScreen</Text>
-    </View>
+    </MyScreenContainer>
   );
 };
 
 export default LoginScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
