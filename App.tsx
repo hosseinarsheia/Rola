@@ -1,17 +1,8 @@
 import React from 'react';
-import {Switch, View, Text, SafeAreaView, StyleSheet} from 'react-native';
+import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
 import {ThemeProvider, useTheme} from './src/theme/ThemeProvider';
-
-const Toggle = () => {
-  const {setScheme, isDark} = useTheme();
-
-  const toggleScheme = () => {
-    isDark ? setScheme('light') : setScheme('dark');
-  };
-
-  return <Switch value={isDark} onValueChange={toggleScheme} />;
-};
 
 const Screen = () => {
   const {colors} = useTheme();
@@ -23,7 +14,6 @@ const Screen = () => {
           styles.screenContainer,
           {backgroundColor: colors.backgroundColor},
         ]}>
-        <Toggle />
         <Text style={{color: colors.black.S100}}>hello</Text>
       </View>
     </SafeAreaView>
@@ -32,9 +22,11 @@ const Screen = () => {
 
 const App = () => {
   return (
-    <ThemeProvider>
-      <Screen />
-    </ThemeProvider>
+    <NavigationContainer>
+      <ThemeProvider>
+        <Screen />
+      </ThemeProvider>
+    </NavigationContainer>
   );
 };
 
