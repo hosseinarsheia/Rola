@@ -78,6 +78,7 @@ export const lightColors = {
   ...unionColors,
   backgroundColor: '#FFFFFF',
   text: unionColors.black.S80,
+  textInput: unionColors.paleWhite.S100,
 };
 
 // Dark theme colors
@@ -85,4 +86,5 @@ export const darkColors = {
   ...unionColors,
   backgroundColor: '#162534',
   text: '#FFFFFF',
+  textInput: unionColors.black.S90,
 };

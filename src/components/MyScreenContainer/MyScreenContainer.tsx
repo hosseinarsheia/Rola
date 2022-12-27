@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { StyleSheet, StatusBar } from 'react-native';
+import { StyleSheet, StatusBar, ViewStyle } from 'react-native';
 import { SafeAreaView, SafeAreaViewProps } from 'react-native-safe-area-context';
 import { ThemeColorType, useTheme } from '../../theme/ThemeProvider';
 
@@ -7,19 +7,19 @@ import { ThemeColorType, useTheme } from '../../theme/ThemeProvider';
 
 interface ScreenContainerProps extends SafeAreaViewProps {
   children: React.ReactNode;
+  containerStyle?: ViewStyle;
 }
 
-const MyScreenContainer = ({ children }: ScreenContainerProps) => {
+const MyScreenContainer = ({ children, containerStyle }: ScreenContainerProps) => {
   const { colors, isDark } = useTheme();
   const style = useMemo(() => createdStyle(colors), [colors]);
 
   return (
-    <SafeAreaView style={style.container}>
+    <SafeAreaView style={[style.container, containerStyle]}>
       <StatusBar
         barStyle={isDark ? 'light-content' : 'dark-content'}
         backgroundColor={isDark ? colors.backgroundColor : colors.white.S100}
       />
-
       {children}
     </SafeAreaView>
   );

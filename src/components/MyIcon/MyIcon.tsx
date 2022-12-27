@@ -25,7 +25,7 @@ interface MyIconProps extends IconProps {
 }
 
 function MyIcon({
-  name = 'user',
+  name,
   type = 'font-awesome',
   size = 30,
   color,

@@ -1,4 +1,4 @@
-import {RFValue} from 'react-native-responsive-fontsize';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 export default {
   fs36: RFValue(36),
