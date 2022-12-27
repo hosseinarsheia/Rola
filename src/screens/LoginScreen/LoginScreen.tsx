@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Text, StyleSheet } from 'react-native';
 
-import { MyScreenContainer, MySpacer } from '../../components';
+import { MyScreenContainer, MySpacer, MyText } from '../../components';
+import R from '../../res/R';
+import { ThemeColorType, useTheme } from '../../theme/ThemeProvider';
 
 const LoginScreen = () => {
+  const { colors } = useTheme();
+  const styles = useMemo(() => createdStyle(colors), [colors]);
   return (
     <MyScreenContainer style={styles.container}>
-      <MySpacer horizontalSpace={5} vertticalSpace={6} />
-      <Text> LoginScreen</Text>
+      <MyText style={{ ...R.style.largeExtraBold }}>Login</MyText>
     </MyScreenContainer>
   );
 };
 
 export default LoginScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const createdStyle = (colors: ThemeColorType) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: colors.backgroundColor,
+    },
+  });

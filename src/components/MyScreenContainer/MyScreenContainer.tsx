@@ -33,5 +33,6 @@ const createdStyle = (colors: ThemeColorType) =>
       flex: 1,
       backgroundColor: colors.backgroundColor,
       paddingTop: 20,
+      alignItems: 'center',
     },
   });

@@ -1,28 +1,29 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { Text, StyleSheet, TextStyle, TextProps } from 'react-native';
 
 import R from '../../res/R';
-import { ThemeColorType, useTheme } from '../../theme/ThemeProvider';
+import { useTheme } from '../../theme/ThemeProvider';
 
 interface MyTextProps extends TextProps {
   children: React.ReactNode | React.ReactNode[];
   style?: TextStyle;
-  color?: keyof ThemeColorType;
-  size?: number;
+  color?: string;
 }
-function MyText({ children, style, color, size }: MyTextProps) {
+function MyText({ children, style, color }: MyTextProps) {
   const { colors } = useTheme();
-  const styles = useMemo(() => createdStyle(colors), [colors]);
 
-  return <Text style={[styles.text, style, { color, fontSize: size }]}>{children}</Text>;
+  return (
+    <Text style={[styles.text, style, { color: color ? color : colors.text }]}>
+      {children}
+    </Text>
+  );
 }
 
 export default MyText;
 
-const createdStyle = (colors: ThemeColorType) =>
-  StyleSheet.create({
-    text: {
-      ...R.style.mediumRegular,
-      color: colors.text,
-    },
-  });
+const styles = StyleSheet.create({
+  text: {
+    fontFamily: R.fonts.regular,
+    fontSize: R.fontSize.fs14,
+  },
+});

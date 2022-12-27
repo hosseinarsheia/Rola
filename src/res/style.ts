@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import fontFamily from './fontFamily';
 import fontSize from './fontSize';
 
@@ -21,6 +21,21 @@ export default StyleSheet.create({
   titleRegular: {
     fontFamily: fontFamily.regular,
     fontSize: fontSize.fs24,
+  },
+
+  largeExtraBold: {
+    fontFamily: fontFamily.extraBold,
+    fontSize: fontSize.fs18,
+  },
+
+  LargeSemiBold: {
+    fontFamily: fontFamily.semiBold,
+    fontSize: fontSize.fs18,
+  },
+
+  LargeRegular: {
+    fontFamily: fontFamily.regular,
+    fontSize: fontSize.fs18,
   },
 
   mediumBold: {

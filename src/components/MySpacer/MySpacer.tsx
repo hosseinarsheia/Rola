@@ -9,10 +9,9 @@ interface MySpacerProps {
 function MySpacer({ vertticalSpace, horizontalSpace }: MySpacerProps) {
   return (
     <View
-      // eslint-disable-next-line react-native/no-inline-styles
       style={{
-        marginVertical: vertticalSpace ? vertticalSpace / 2 : 5,
-        marginHorizontal: horizontalSpace ? horizontalSpace / 2 : 5,
+        marginVertical: vertticalSpace ? vertticalSpace / 2 : undefined,
+        marginHorizontal: horizontalSpace ? horizontalSpace / 2 : undefined,
       }}
     />
   );
