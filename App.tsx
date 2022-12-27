@@ -1,8 +1,10 @@
 import React from 'react';
 import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 import {ThemeProvider, useTheme} from './src/theme/ThemeProvider';
+import {R} from './src/res/R';
 
 const Screen = () => {
   const {colors} = useTheme();
@@ -14,7 +16,14 @@ const Screen = () => {
           styles.screenContainer,
           {backgroundColor: colors.backgroundColor},
         ]}>
-        <Text style={{color: colors.black.S100}}>hello</Text>
+        <Text
+          style={{
+            color: colors.black.S100,
+            fontSize: 100,
+            fontFamily: R.fonts.extraBold,
+          }}>
+          hello
+        </Text>
       </View>
     </SafeAreaView>
   );
@@ -24,7 +33,9 @@ const App = () => {
   return (
     <NavigationContainer>
       <ThemeProvider>
-        <Screen />
+        <SafeAreaProvider>
+          <Screen />
+        </SafeAreaProvider>
       </ThemeProvider>
     </NavigationContainer>
   );
