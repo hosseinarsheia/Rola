@@ -11,8 +11,8 @@ interface ScreenContainerProps extends SafeAreaViewProps {
 
 const MyScreenContainer = ({ children }: ScreenContainerProps) => {
   const { colors, isDark } = useTheme();
-
   const style = useMemo(() => createdStyle(colors), [colors]);
+
   return (
     <SafeAreaView style={style.container}>
       <StatusBar

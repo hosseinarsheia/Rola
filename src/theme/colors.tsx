@@ -77,10 +77,12 @@ const unionColors = {
 export const lightColors = {
   ...unionColors,
   backgroundColor: '#FFFFFF',
+  text: '#162534CC ',
 };
 
 // Dark theme colors
 export const darkColors = {
   ...unionColors,
   backgroundColor: '#162534',
+  text: '#FFFFFF',
 };
