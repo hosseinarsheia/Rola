@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { Text, StyleSheet } from 'react-native';
+import { Icon } from '@rneui/themed';
 
 import { MyScreenContainer, MySpacer, MyText } from '../../components';
 import R from '../../res/R';
@@ -11,6 +12,8 @@ const LoginScreen = () => {
   return (
     <MyScreenContainer style={styles.container}>
       <MyText style={{ ...R.style.largeExtraBold }}>Login</MyText>
+
+      <Icon name="user" type="antdesign" />
     </MyScreenContainer>
   );
 };
