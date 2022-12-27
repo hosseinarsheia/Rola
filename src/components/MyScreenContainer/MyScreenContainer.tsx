@@ -19,6 +19,7 @@ const MyScreenContainer = ({ children }: ScreenContainerProps) => {
         barStyle={isDark ? 'light-content' : 'dark-content'}
         backgroundColor={isDark ? colors.backgroundColor : colors.white.S100}
       />
+
       {children}
     </SafeAreaView>
   );
@@ -31,5 +32,6 @@ const createdStyle = (colors: ThemeColorType) =>
     container: {
       flex: 1,
       backgroundColor: colors.backgroundColor,
+      paddingTop: 20,
     },
   });
