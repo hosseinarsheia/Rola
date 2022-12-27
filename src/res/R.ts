@@ -2,7 +2,7 @@ import fonts from './fontFamily';
 import fontSize from './fontSize';
 import style from './style';
 
-export const R = {
+export default {
   fonts,
   fontSize,
   style,
