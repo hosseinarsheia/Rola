@@ -48,5 +48,6 @@ const createdStyle = (colors: ThemeColorType) =>
       backgroundColor: colors.textInput,
       borderBottomWidth: 0,
       borderRadius: 4,
+      paddingVertical: 5,
     },
   });
