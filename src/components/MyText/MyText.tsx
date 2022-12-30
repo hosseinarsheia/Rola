@@ -8,12 +8,21 @@ interface MyTextProps extends TextProps {
   children: React.ReactNode | React.ReactNode[];
   style?: TextStyle;
   color?: string;
+  opacity?: number;
 }
-function MyText({ children, style, color }: MyTextProps) {
-  const { colors } = useTheme();
+function MyText({ children, style, color, opacity }: MyTextProps) {
+  const { colors, isDark } = useTheme();
 
   return (
-    <Text style={[styles.text, style, { color: color ? color : colors.text }]}>
+    <Text
+      style={[
+        styles.text,
+        style,
+        {
+          color: color ? color : colors.text,
+          opacity: opacity ? opacity : isDark ? 0.8 : 1,
+        },
+      ]}>
       {children}
     </Text>
   );

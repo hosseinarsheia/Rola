@@ -40,6 +40,7 @@ const createdStyle = (colors: ThemeColorType) =>
     inputStyle: {
       ...R.style.smallRegular,
       textAlignVertical: 'center',
+      color: colors.text,
     },
     inputContainerStyle: {
       borderBottomWidth: 0,

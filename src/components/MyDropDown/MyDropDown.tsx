@@ -3,6 +3,7 @@ import { StyleSheet, ViewStyle } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 
 import { useTheme, ThemeColorType } from '../../theme/ThemeProvider';
+import MyIcon from '../MyIcon';
 
 interface MyDropDownProps {
   style?: ViewStyle;
@@ -36,6 +37,15 @@ function MyDropDown({ style, placeholder, containerStyle, ...props }: MyDropDown
       placeholder={placeholder}
       props={{ activeOpacity: 0.9 }}
       labelProps={{ numberOfLines: 1 }}
+      placeholderStyle={{ color: colors.text }}
+      ArrowDownIconComponent={() => (
+        <MyIcon
+          name="keyboard-arrow-down"
+          type="material"
+          color={colors.text}
+          size={20}
+        />
+      )}
       open={open}
       value={value}
       items={items}

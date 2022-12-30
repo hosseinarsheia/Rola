@@ -9,12 +9,13 @@ import {
   MyButton,
   MyLogo,
   MyDropDown,
-} from '../../components';
-import R from '../../res/R';
-import { ThemeColorType, useTheme } from '../../theme/ThemeProvider';
+} from '../../../components';
+import { SignUpScreenProps } from '../../../navigation/rootNavigator/ParamList';
+import R from '../../../res/R';
+import { ThemeColorType, useTheme } from '../../../theme/ThemeProvider';
 
-function SignUpScreen() {
-  const { colors } = useTheme();
+function SignUpScreen({ navigation }: SignUpScreenProps) {
+  const { colors, isDark } = useTheme();
   const styles = useMemo(() => createdStyle(colors), [colors]);
 
   return (
@@ -26,7 +27,7 @@ function SignUpScreen() {
         <MyLogo />
 
         <MySpacer vertticalSpace={30} />
-        <MyText color={colors.black.S80} style={{ ...R.style.largeBold }}>
+        <MyText color={colors.text} style={{ ...R.style.largeBold }}>
           Sign up
         </MyText>
 
@@ -54,11 +55,17 @@ function SignUpScreen() {
         <MyTextInput placeholder="Gender" value="" />
 
         <MySpacer vertticalSpace={R.dimentions.verticalSpace} />
-        <View style={styles.birthDayContainer}>
-          <MyText style={{ ...R.style.smallRegular }}>Birthday</MyText>
-          <MyDropDown placeholder="MM" containerStyle={{ flex: 1 }} />
-          <MyDropDown placeholder="DD" containerStyle={{ flex: 1 }} />
-          <MyDropDown placeholder="YYYY" containerStyle={{ flex: 1 }} />
+        <View
+          style={[
+            styles.birthDayContainer,
+            {
+              backgroundColor: isDark ? colors.black.S100 : colors.paleWhite.S100,
+            },
+          ]}>
+          <MyText style={styles.birthdayContainer}>Birthday</MyText>
+          <MyDropDown placeholder="MM" containerStyle={styles.dropdownContainer} />
+          <MyDropDown placeholder="DD" containerStyle={styles.dropdownContainer} />
+          <MyDropDown placeholder="YYYY" containerStyle={styles.dropdownContainer} />
         </View>
 
         <MySpacer vertticalSpace={R.dimentions.verticalSpace} />
@@ -68,11 +75,14 @@ function SignUpScreen() {
         <MyTextInput placeholder="Confirm Password" value="" />
 
         <MySpacer vertticalSpace={R.dimentions.verticalSpace * 2} />
-        <MyButton title="Sign up" />
+        <MyButton
+          title="Sign up"
+          onPress={() => navigation.navigate('VerificationCodeScreen')}
+        />
 
         <MySpacer vertticalSpace={R.dimentions.verticalSpace * 3} />
 
-        <MyText style={{ ...R.style.smallRegular, textAlign: 'center' }}>
+        <MyText style={styles.desciptionText}>
           Your phone number lets merchants and venues contact you about bookings and will
           not be shared
         </MyText>
@@ -85,9 +95,19 @@ export default SignUpScreen;
 
 const createdStyle = (colors: ThemeColorType) =>
   StyleSheet.create({
+    birthdayContainer: {
+      ...R.style.smallRegular,
+      color: colors.text,
+    },
+    desciptionText: {
+      ...R.style.smallRegular,
+      textAlign: 'center',
+    },
+    dropdownContainer: {
+      flex: 1,
+    },
     birthDayContainer: {
       flexDirection: 'row',
-      backgroundColor: colors.paleWhite.S100,
       padding: 5,
       paddingHorizontal: 10,
       alignItems: 'center',
