@@ -24,7 +24,9 @@ function MyButton({
       <LinearGradient
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0 }}
-        colors={colors.linearGradient.button}
+        colors={
+          gradient ? colors.linearGradient.button : colors.linearGradient.buttonReverse
+        }
         style={styles.linearGradient}>
         <View
           style={[
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
     borderRadius: 50,
-    padding: 3,
+    padding: 2,
     overflow: 'hidden',
   },
   titleContainer: {

@@ -40,15 +40,15 @@ const unionColors = {
 
   black: {
     S100: '#2D3B48',
-    S90: '#162534E5',
-    S80: '#162534CC',
-    S70: '#162534B2',
-    S60: '#16253499',
-    S50: '#16253480 ',
-    S40: '#16253466',
-    S30: '#1625344D',
-    S20: '#16253433',
-    S10: '#1625341A',
+    S90: '#2D3B48',
+    S80: '#45515D',
+    S70: '#45515D',
+    S60: '#737C85',
+    S50: '#8A9299 ',
+    S40: '#A2A8AE',
+    S30: '#B9BEC2',
+    S20: '#D0D3D6',
+    S10: '#E8E9EB',
   },
 
   white: {
@@ -73,7 +73,11 @@ const unionColors = {
     blue5: ['#E6FCFD', '#0088EF'],
     blue6: ['#1625341A', '#162534'],
     button: ['#7B61FF', '#0088EF'],
+    buttonReverse: ['#0088EF', '#7B61FF'],
   },
+
+  grayBorder: '#DCDEE0',
+  linkText: '#22BEF1',
 };
 export const lightColors = {
   ...unionColors,

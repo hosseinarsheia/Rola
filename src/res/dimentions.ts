@@ -1,4 +1,4 @@
 export default {
   verticalSpace: 10,
-  horizontalSpace: 16,
+  horizontalSpace: 10,
 };

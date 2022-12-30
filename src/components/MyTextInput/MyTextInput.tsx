@@ -12,7 +12,7 @@ interface MyTextInputProps extends InputProps {
 }
 
 function MyTextInput({
-  required = true,
+  required = false,
   placeholder = 'placeholder',
   containerStyle,
   ...props
