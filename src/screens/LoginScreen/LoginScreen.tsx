@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import {
   MyScreenContainer,
@@ -10,10 +11,11 @@ import {
   MyIcon,
   MyLogo,
 } from '../../components';
+import { LoginScreenProps } from '../../navigation/rootNavigator/ParamList';
 import R from '../../res/R';
 import { ThemeColorType, useTheme } from '../../theme/ThemeProvider';
 
-function LoginScreen() {
+function LoginScreen({ navigation }: LoginScreenProps) {
   const { colors } = useTheme();
   const styles = useMemo(() => createdStyle(colors), [colors]);
 
@@ -26,15 +28,14 @@ function LoginScreen() {
         <MyLogo />
 
         <MySpacer vertticalSpace={30} />
-        <MyText color={colors.black.S80} style={{ ...R.style.largeBold }}>
+        <MyText color={colors.text} style={{ ...R.style.largeBold }}>
           Login
         </MyText>
 
-        <MySpacer vertticalSpace={25} />
-        <MyTextInput placeholder="Email Address or Mobile Number" value="" />
+        <MySpacer vertticalSpace={R.dimentions.verticalSpace * 4} />
+        <MyTextInput placeholder="Email addresss or Mobile Number" value="" />
 
         <MySpacer vertticalSpace={R.dimentions.verticalSpace} />
-
         <MyTextInput placeholder="Password" value="" />
 
         <MySpacer vertticalSpace={R.dimentions.verticalSpace * 1.6} />
@@ -67,8 +68,10 @@ function LoginScreen() {
 
         <MySpacer vertticalSpace={R.dimentions.verticalSpace * 3} showBorder />
 
-        <View style={styles.accountTextContainer}>
-          <MyText style={{ ...R.style.mediumBold }} color={colors.black.S80}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('SignUpScreen')}
+          style={styles.accountTextContainer}>
+          <MyText style={styles.signUpText} color={colors.text}>
             Don’t have an account? Sign up
           </MyText>
 
@@ -78,7 +81,7 @@ function LoginScreen() {
             type="material"
             color={colors.linkText}
           />
-        </View>
+        </TouchableOpacity>
       </ScrollView>
     </MyScreenContainer>
   );
@@ -87,6 +90,10 @@ function LoginScreen() {
 export default LoginScreen;
 const createdStyle = (colors: ThemeColorType) =>
   StyleSheet.create({
+    signUpText: {
+      ...R.style.mediumBold,
+      flex: 1,
+    },
     scrollViewContent: {
       alignItems: 'center',
     },

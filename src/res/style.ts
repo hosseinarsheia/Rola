@@ -8,7 +8,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs36,
     lineHeight: fontSize.fs36 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   largeTitleRegular: {
@@ -16,7 +15,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs36,
     lineHeight: fontSize.fs36 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   titleListing: {
@@ -24,7 +22,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs24,
     lineHeight: fontSize.fs24 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   titleRegular: {
@@ -32,7 +29,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs24,
     lineHeight: fontSize.fs24 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   largeBold: {
@@ -40,7 +36,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs18,
     lineHeight: fontSize.fs18 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   largeMedium: {
@@ -48,7 +43,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs18,
     lineHeight: fontSize.fs18 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   LargeRegular: {
@@ -56,7 +50,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs18,
     lineHeight: fontSize.fs18 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   mediumBold: {
@@ -64,7 +57,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs14,
     lineHeight: fontSize.fs14 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   mediumSemiBold: {
@@ -72,7 +64,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs14,
     lineHeight: fontSize.fs14 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   mediumRegular: {
@@ -80,7 +71,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs14,
     lineHeight: fontSize.fs14 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   smallBold: {
@@ -88,7 +78,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs12,
     lineHeight: fontSize.fs12 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   smallSemiBold: {
@@ -96,7 +85,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs12,
     lineHeight: fontSize.fs12 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   smallRegular: {
@@ -104,7 +92,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs12,
     lineHeight: fontSize.fs12 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   tinyBold: {
@@ -112,7 +99,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs10,
     lineHeight: fontSize.fs10 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   tinySemiBold: {
@@ -120,7 +106,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs10,
     lineHeight: fontSize.fs10 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   tinyRegular: {
@@ -128,7 +113,6 @@ export default StyleSheet.create({
     fontSize: fontSize.fs10,
     lineHeight: fontSize.fs10 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
   },
 
   smallAllCaps: {
@@ -136,7 +120,7 @@ export default StyleSheet.create({
     fontSize: fontSize.fs10,
     lineHeight: fontSize.fs10 * 1.5,
     color: '#162534CC',
-    opacity: 0.8,
+
     textTransform: 'uppercase',
   },
 });

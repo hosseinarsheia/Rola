@@ -1,12 +1,18 @@
 import React from 'react';
-import { View, StyleSheet, ViewStyle } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  ViewStyle,
+  TouchableOpacity,
+  TouchableOpacityProps,
+} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 import R from '../../res/R';
 import { useTheme } from '../../theme/ThemeProvider';
 import MyText from '../MyText';
 
-interface MyButtonProps {
+interface MyButtonProps extends TouchableOpacityProps {
   containerStyle?: ViewStyle;
   title: string;
   gradient?: boolean;
@@ -16,11 +22,15 @@ function MyButton({
   title = 'change me',
   containerStyle,
   gradient = true,
+  ...props
 }: MyButtonProps) {
   const { colors } = useTheme();
 
   return (
-    <View style={[styles.container, containerStyle]}>
+    <TouchableOpacity
+      activeOpacity={0.8}
+      style={[styles.container, containerStyle]}
+      {...props}>
       <LinearGradient
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0 }}
@@ -32,16 +42,14 @@ function MyButton({
           style={[
             styles.titleContainer,
             // eslint-disable-next-line react-native/no-inline-styles
-            { backgroundColor: gradient ? 'transparent' : 'white' },
+            { backgroundColor: gradient ? 'transparent' : colors.backgroundColor },
           ]}>
-          <MyText
-            style={styles.title}
-            color={gradient ? colors.white.S100 : colors.black.S80}>
+          <MyText style={styles.title} color={gradient ? colors.white.S100 : colors.text}>
             {title}
           </MyText>
         </View>
       </LinearGradient>
-    </View>
+    </TouchableOpacity>
   );
 }
 

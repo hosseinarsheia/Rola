@@ -2,13 +2,21 @@ import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 
 import R from '../../res/R';
+import { useTheme } from '../../theme/ThemeProvider';
 import MyIcon from '../MyIcon';
 import MyText from '../MyText';
 
 function MyLogo() {
+  const { colors, isDark, setScheme } = useTheme();
   return (
     <View style={styles.logoWrapper}>
-      <MyIcon name="arrowleft" type="antdesign" />
+      <MyIcon
+        name="arrowleft"
+        type="antdesign"
+        onPress={() => {
+          setScheme(isDark ? 'light' : 'dark');
+        }}
+      />
       <View style={styles.imageAndTitleContainer}>
         <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
 
