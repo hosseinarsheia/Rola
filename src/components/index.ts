@@ -4,5 +4,6 @@ import MySpacer from './MySpacer';
 import MyIcon from './MyIcon';
 import MyTextInput from './MyTextInput';
 import MyDropDown from './MyDropDown';
+import MyButton from './MyButton';
 
-export { MyScreenContainer, MyText, MySpacer, MyIcon, MyTextInput, MyDropDown };
+export { MyScreenContainer, MyText, MySpacer, MyIcon, MyTextInput, MyDropDown, MyButton };

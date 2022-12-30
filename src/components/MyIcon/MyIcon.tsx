@@ -3,7 +3,7 @@ import { Icon, IconProps } from '@rneui/themed';
 
 import { useTheme } from '../../theme/ThemeProvider';
 
-type IconType =
+export type IconType =
   | 'material'
   | 'material-community'
   | 'simple-line-icon'
@@ -17,7 +17,7 @@ type IconType =
   | 'antdesign'
   | 'font-awesome-5';
 
-interface MyIconProps extends IconProps {
+export interface MyIconProps extends IconProps {
   name: string;
   type?: IconType;
   size?: number;

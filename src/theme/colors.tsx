@@ -72,6 +72,7 @@ const unionColors = {
     blue4: ['#0088EF1A', '#00E3EF'],
     blue5: ['#E6FCFD', '#0088EF'],
     blue6: ['#1625341A', '#162534'],
+    button: ['#7B61FF', '#0088EF'],
   },
 };
 export const lightColors = {

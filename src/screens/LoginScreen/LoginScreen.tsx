@@ -7,6 +7,7 @@ import {
   MyTextInput,
   MySpacer,
   MyDropDown,
+  MyButton,
 } from '../../components';
 import R from '../../res/R';
 import { ThemeColorType, useTheme } from '../../theme/ThemeProvider';
@@ -32,6 +33,9 @@ function LoginScreen() {
 
       <MySpacer vertticalSpace={R.dimentions.verticalSpace} />
       <MyTextInput placeholder="Email Address" value="" />
+
+      <MySpacer vertticalSpace={R.dimentions.verticalSpace} />
+      <MyButton title="Login" gradient={false} />
     </MyScreenContainer>
   );
 }
