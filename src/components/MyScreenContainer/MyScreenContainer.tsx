@@ -32,7 +32,7 @@ const createdStyle = (colors: ThemeColorType) =>
     container: {
       flex: 1,
       backgroundColor: colors.backgroundColor,
-      paddingTop: 20,
+      marginTop: 10,
       alignItems: 'center',
     },
   });

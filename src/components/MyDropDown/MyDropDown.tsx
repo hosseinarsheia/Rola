@@ -6,9 +6,11 @@ import { useTheme, ThemeColorType } from '../../theme/ThemeProvider';
 
 interface MyDropDownProps {
   style?: ViewStyle;
+  containerStyle?: ViewStyle;
+  placeholder?: string;
 }
 
-function MyDropDown({ style }: MyDropDownProps) {
+function MyDropDown({ style, placeholder, containerStyle, ...props }: MyDropDownProps) {
   const { colors } = useTheme();
   const styles = useMemo(() => createdStyle(colors), [colors]);
 
@@ -30,6 +32,8 @@ function MyDropDown({ style }: MyDropDownProps) {
   return (
     <DropDownPicker
       style={[styles.style, style]}
+      containerStyle={containerStyle}
+      placeholder={placeholder}
       props={{ activeOpacity: 0.9 }}
       labelProps={{ numberOfLines: 1 }}
       open={open}
@@ -38,7 +42,9 @@ function MyDropDown({ style }: MyDropDownProps) {
       setOpen={setOpen}
       setValue={setValue}
       setItems={setItems}
+      zIndex={1000}
       showArrowIcon
+      {...props}
     />
   );
 }

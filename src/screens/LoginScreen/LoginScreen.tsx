@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { StyleSheet, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 
 import {
   MyScreenContainer,
@@ -8,6 +8,7 @@ import {
   MySpacer,
   MyButton,
   MyIcon,
+  MyLogo,
 } from '../../components';
 import R from '../../res/R';
 import { ThemeColorType, useTheme } from '../../theme/ThemeProvider';
@@ -22,11 +23,7 @@ function LoginScreen() {
         style={styles.scrollViewStyle}
         contentContainerStyle={styles.scrollViewContent}
         showsVerticalScrollIndicator={false}>
-        <View style={styles.logoWrapper}>
-          <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
-
-          <MyText style={styles.logoTitle}>Rola</MyText>
-        </View>
+        <MyLogo />
 
         <MySpacer vertticalSpace={30} />
         <MyText color={colors.black.S80} style={{ ...R.style.largeBold }}>
@@ -96,20 +93,7 @@ const createdStyle = (colors: ThemeColorType) =>
     scrollViewStyle: {
       width: '100%',
     },
-    logoTitle: {
-      ...R.style.largeMedium,
-      fontSize: R.fontSize.fs24,
-      marginLeft: 10,
-    },
-    logo: {
-      width: 50,
-      height: 50,
-    },
-    logoWrapper: {
-      flexDirection: 'row',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
+
     accountTextContainer: {
       flexDirection: 'row',
       alignItems: 'center',
