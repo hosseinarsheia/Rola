@@ -4,6 +4,7 @@ export type ParamList = {
   LoginScreen: undefined;
   SignUpScreen: undefined;
   VerificationCodeScreen: undefined;
+  OnBoardingScreen: undefined;
   // Profile: { userId: string };
   // Feed: { sort: 'latest' | 'top' } | undefined;
 };
@@ -14,3 +15,4 @@ export type VerificationCodeProps = NativeStackScreenProps<
   ParamList,
   'VerificationCodeScreen'
 >;
+export type OnBoardingScreenProps = NativeStackScreenProps<ParamList, 'OnBoardingScreen'>;

@@ -6,24 +6,34 @@ import { useTheme } from '../../theme/ThemeProvider';
 import MyIcon from '../MyIcon';
 import MyText from '../MyText';
 
-function MyLogo() {
-  const { colors, isDark, setScheme } = useTheme();
+interface MyLogoProps {
+  hideBackIcon?: boolean;
+}
+
+function MyLogo({ hideBackIcon = false }: MyLogoProps) {
+  const { isDark, setScheme } = useTheme();
   return (
-    <View style={styles.logoWrapper}>
-      <MyIcon
-        name="arrowleft"
-        type="antdesign"
-        onPress={() => {
-          setScheme(isDark ? 'light' : 'dark');
-        }}
-      />
+    <View
+      style={[
+        styles.logoWrapper,
+        { justifyContent: hideBackIcon ? 'center' : 'space-between' },
+      ]}>
+      {!hideBackIcon && (
+        <MyIcon
+          name="arrowleft"
+          type="antdesign"
+          onPress={() => {
+            setScheme(isDark ? 'light' : 'dark');
+          }}
+        />
+      )}
       <View style={styles.imageAndTitleContainer}>
         <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
 
         <MyText style={styles.logoTitle}>Rola</MyText>
       </View>
 
-      <MyIcon name="arrowleft" type="antdesign" color="transparent" />
+      {!hideBackIcon && <MyIcon name="arrowleft" type="antdesign" color="transparent" />}
     </View>
   );
 }
@@ -37,7 +47,7 @@ const styles = StyleSheet.create({
   },
   logoWrapper: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+
     alignItems: 'center',
     width: '100%',
   },
