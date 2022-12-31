@@ -123,4 +123,8 @@ export default StyleSheet.create({
 
     textTransform: 'uppercase',
   },
+
+  screenPadding: {
+    paddingHorizontal: 45,
+  },
 });

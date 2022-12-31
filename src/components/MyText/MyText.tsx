@@ -10,8 +10,8 @@ interface MyTextProps extends TextProps {
   color?: string;
   opacity?: number;
 }
-function MyText({ children, style, color, opacity }: MyTextProps) {
-  const { colors, isDark } = useTheme();
+function MyText({ children, style, color }: MyTextProps) {
+  const { colors } = useTheme();
 
   return (
     <Text
@@ -20,7 +20,6 @@ function MyText({ children, style, color, opacity }: MyTextProps) {
         style,
         {
           color: color ? color : colors.text,
-          opacity: opacity ? opacity : isDark ? 0.8 : 1,
         },
       ]}>
       {children}

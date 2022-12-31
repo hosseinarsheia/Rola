@@ -82,7 +82,7 @@ const unionColors = {
 export const lightColors = {
   ...unionColors,
   backgroundColor: '#FFFFFF',
-  text: unionColors.black.S80,
+  text: 'rgba(69,81,93,0.8)',
   textInput: unionColors.paleWhite.S100,
 };
 
