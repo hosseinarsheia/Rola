@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { StyleSheet, View, ScrollView, TouchableOpacity } from 'react-native';
 
 import {
   MyScreenContainer,

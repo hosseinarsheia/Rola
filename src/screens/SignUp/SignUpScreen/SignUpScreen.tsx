@@ -42,7 +42,7 @@ function SignUpScreen({ navigation }: SignUpScreenProps) {
 
         <MySpacer vertticalSpace={R.dimentions.verticalSpace} />
 
-        <View style={{ flexDirection: 'row' }}>
+        <View style={{ flexDirection: 'row', alignItems: 'stretch' }}>
           <MyDropDown placeholder="+1" containerStyle={{ flex: 0.5 }} />
           <MySpacer horizontalSpace={R.dimentions.horizontalSpace} />
           <MyTextInput containerStyle={{ flex: 1 }} placeholder="555-555-555" value="" />

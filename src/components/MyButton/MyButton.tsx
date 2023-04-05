@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   StyleSheet,
@@ -25,6 +25,7 @@ function MyButton({
   ...props
 }: MyButtonProps) {
   const { colors } = useTheme();
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   return (
     <TouchableOpacity

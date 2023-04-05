@@ -4,7 +4,6 @@ import { View, StyleSheet, Image, Animated } from 'react-native';
 import R from '../../res/R';
 import { MyButton, MyLogo, MyScreenContainer, MyText } from '../../components';
 import { useTheme } from '../../theme/ThemeProvider';
-import { NavigationContainer } from '@react-navigation/native';
 import { OnBoardingScreenProps } from '../../navigation/rootNavigator/ParamList';
 
 const ONBOARDING_ITEM = [
